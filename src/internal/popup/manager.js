@@ -16,19 +16,14 @@ const PopupManager = {
     this.changeOverlayStyle()
   },
   close (instance) {
-    let index = this.instances.indexOf(instance)
+    const index = this.instances.indexOf(instance)
     if (index === -1) return
     this.instances.splice(index, 1)
-    Vue.nextTick(() => {
-      if (this.instances.length === 0) {
-        this.closeOverlay()
-      }
-      this.changeOverlayStyle()
-    })
+    this.changeOverlayStyle()
   },
 
   showOverlay (instance) {
-    let overlay = this.overlay = new Overlay({
+    const overlay = this.overlay = new Overlay({
       el: document.createElement('div')
     })
     overlay.fixed = true
@@ -68,7 +63,7 @@ const PopupManager = {
   closeOverlay () {
     if (!this.overlay) return
     this.allowScrolling()
-    let overlay = this.overlay
+    const overlay = this.overlay
     overlay.show = false
     this.overlay = null
     setTimeout(() => {
@@ -78,14 +73,22 @@ const PopupManager = {
   },
 
   changeOverlayStyle () {
-    const instance = this.instances[this.instances.length - 1]
-    if (!this.overlay || this.instances.length === 0) return
-    if (instance.overlay) {
+    if (!this.overlay) return
+    let instance
+    for (let i = 1; i <= this.instances.length; i++) {
+      instance = this.instances[this.instances.length - i]
+      if (instance && instance.overlay) {
+        break
+      }
+      instance = null
+    }
+
+    if (!instance) return this.closeOverlay()
+
+    if (instance && instance.overlay) {
       this.overlay.color = instance.overlayColor
       this.overlay.opacity = instance.overlayOpacity
       this.overlay.zIndex = instance.overlayZIndex
-    } else {
-      this.closeOverlay()
     }
   },
 
