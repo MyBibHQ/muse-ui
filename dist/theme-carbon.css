@@ -80,6 +80,9 @@ a {
 .mu-card-text {
   color: #474a4f;
 }
+.mu-circular-progress-determinate-path {
+  stroke: #474a4f;
+}
 .mu-checkbox input[type="checkbox"]:checked + .mu-checkbox-wrapper .mu-checkbox-icon-uncheck {
   color: #ff5252;
 }
@@ -118,8 +121,39 @@ a {
 .mu-chip-delete-icon {
   color: rgba(71, 74, 79, 0.26);
 }
-.mu-circular-progress-determinate-path {
-  stroke: #474a4f;
+.mu-calendar {
+  color: #474a4f;
+}
+.mu-calendar-year {
+  background-color: #ffffff;
+}
+.mu-date-display {
+  background-color: #474a4f;
+  color: #ffffff;
+}
+.mu-day-button-bg {
+  background-color: #ff5252;
+}
+.mu-day-button-text {
+  font-weight: 400;
+  position: relative;
+  color: #474a4f;
+}
+.mu-day-button.now .mu-day-button-text {
+  color: #ff5252;
+}
+.mu-day-button.hover .mu-day-button-text,
+.mu-day-button.selected .mu-day-button-text {
+  color: #ffffff;
+}
+.mu-year-button-text {
+  color: #474a4f;
+}
+.mu-year-button.selected .mu-year-button-text {
+  color: #ff5252;
+}
+.mu-year-button.hover .mu-year-button-text {
+  color: #ff5252;
 }
 .mu-calendar {
   color: #474a4f;
@@ -167,40 +201,6 @@ a {
 }
 .mu-dialog-body {
   color: rgba(71, 74, 79, 0.6);
-}
-.mu-calendar {
-  color: #474a4f;
-}
-.mu-calendar-year {
-  background-color: #ffffff;
-}
-.mu-date-display {
-  background-color: #474a4f;
-  color: #ffffff;
-}
-.mu-day-button-bg {
-  background-color: #ff5252;
-}
-.mu-day-button-text {
-  font-weight: 400;
-  position: relative;
-  color: #474a4f;
-}
-.mu-day-button.now .mu-day-button-text {
-  color: #ff5252;
-}
-.mu-day-button.hover .mu-day-button-text,
-.mu-day-button.selected .mu-day-button-text {
-  color: #ffffff;
-}
-.mu-year-button-text {
-  color: #474a4f;
-}
-.mu-year-button.selected .mu-year-button-text {
-  color: #ff5252;
-}
-.mu-year-button.hover .mu-year-button-text {
-  color: #ff5252;
 }
 .mu-dropDown-menu-text {
   color: #474a4f;
@@ -415,10 +415,6 @@ a {
   color: #bbbfc4;
   background-color: #ffffff;
 }
-.mu-snackbar {
-  color: #ffffff;
-  background-color: rgba(0, 0, 0, 0.87);
-}
 .mu-step-button {
   background-color: transparent;
 }
@@ -457,6 +453,10 @@ a {
 .mu-step-label.completed .mu-step-label-circle,
 .mu-step-label.active .mu-step-label-circle {
   background-color: #ff5252;
+}
+.mu-snackbar {
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.87);
 }
 .mu-sub-header {
   color: #7e848c;
@@ -584,13 +584,13 @@ a {
   background-color: #ffffff;
   border-color: #ff5252;
 }
+.mu-toast {
+  background-color: rgba(0, 0, 0, 0.87);
+  color: #ffffff;
+}
 .mu-tooltip {
   color: #ffffff;
 }
 .mu-tooltip-ripple.when-shown {
   background-color: #616161;
-}
-.mu-toast {
-  background-color: rgba(0, 0, 0, 0.87);
-  color: #ffffff;
 }

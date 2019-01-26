@@ -104,6 +104,10 @@ a {
   color: @cardTextColor;
 }
 
+.mu-circular-progress-determinate-path{
+  stroke: @circularProgressColor;
+}
+
 .mu-checkbox {
   input[type="checkbox"] {
     &:checked {
@@ -157,8 +161,46 @@ a {
   color: @chipDeleteColor;
 }
 
-.mu-circular-progress-determinate-path{
-  stroke: @circularProgressColor;
+.mu-calendar {
+  color: @datePickerCalendarTextColor;
+}
+
+.mu-calendar-year {
+  background-color: @datePickerCalendarYearBackgroundColor;
+}
+
+
+.mu-date-display{
+  background-color: @datePickerHeaderColor;
+  color: @datePickerTextColor;
+}
+
+
+.mu-day-button-bg {
+  background-color: @datePickerSelectColor;
+}
+
+.mu-day-button-text{
+  font-weight: 400;
+  position: relative;
+  color: @datePickerCalendarTextColor;
+  .mu-day-button.now & {
+    color: @datePickerSelectColor;
+  }
+  .mu-day-button.hover &,
+  .mu-day-button.selected &{
+    color: @datePickerSelectTextColor;
+  }
+}
+
+.mu-year-button-text {
+  color: @datePickerCalendarTextColor;
+  .mu-year-button.selected &{
+    color: @datePickerSelectColor;
+  }
+  .mu-year-button.hover &{
+    color: @datePickerSelectColor;
+  }
 }
 
 .mu-calendar {
@@ -220,48 +262,6 @@ a {
 
 .mu-dialog-body {
   color: @dialogBodyColor
-}
-
-.mu-calendar {
-  color: @datePickerCalendarTextColor;
-}
-
-.mu-calendar-year {
-  background-color: @datePickerCalendarYearBackgroundColor;
-}
-
-
-.mu-date-display{
-  background-color: @datePickerHeaderColor;
-  color: @datePickerTextColor;
-}
-
-
-.mu-day-button-bg {
-  background-color: @datePickerSelectColor;
-}
-
-.mu-day-button-text{
-  font-weight: 400;
-  position: relative;
-  color: @datePickerCalendarTextColor;
-  .mu-day-button.now & {
-    color: @datePickerSelectColor;
-  }
-  .mu-day-button.hover &,
-  .mu-day-button.selected &{
-    color: @datePickerSelectTextColor;
-  }
-}
-
-.mu-year-button-text {
-  color: @datePickerCalendarTextColor;
-  .mu-year-button.selected &{
-    color: @datePickerSelectColor;
-  }
-  .mu-year-button.hover &{
-    color: @datePickerSelectColor;
-  }
 }
 
 .mu-dropDown-menu-text {
@@ -551,11 +551,6 @@ a {
   }
 }
 
-.mu-snackbar {
-  color: @snackbarTextColor;
-  background-color: @snackbarColor;
-}
-
 .mu-step-button {
   background-color: @stepperBackgroundColor;
   &.hover {
@@ -603,6 +598,11 @@ a {
   .mu-step-label.active & {
     background-color: @stepperIconColor;
   }
+}
+
+.mu-snackbar {
+  color: @snackbarTextColor;
+  background-color: @snackbarColor;
 }
 
 // subheader
@@ -779,15 +779,15 @@ a {
   border-color:  @timePickerSelectColor;
 }
 
+.mu-toast {
+  background-color: @toastColor;
+  color: @toastTextColor;
+}
+
 .mu-tooltip{
   color: @tooltipTextColor;
 }
 
 .mu-tooltip-ripple.when-shown {
   background-color: @tooltipRippleColor;
-}
-
-.mu-toast {
-  background-color: @toastColor;
-  color: @toastTextColor;
 }
