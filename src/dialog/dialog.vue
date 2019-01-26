@@ -1,6 +1,6 @@
 <template>
   <span>
-    <transition name="mu-dialog-slide" @after-enter="show()" @after-leave="hide()">
+    <transition :name="`mu-dialog-${transition}`" @after-enter="show()" @after-leave="hide()">
       <div class="mu-dialog-wrapper" @click="handleWrapperClick" v-if="open" ref="popup" :style="{'z-index': zIndex}">
         <div class="mu-dialog" ref="dialog" :class="dialogClass">
           <h3 class="mu-dialog-title" v-if="showTitle" ref="title" :class="headerClass">
@@ -46,6 +46,10 @@ export default {
     scrollable: {
       type: Boolean,
       default: false
+    },
+    transition: {
+      type: String,
+      default: 'scale'
     }
   },
   computed: {
@@ -184,6 +188,7 @@ export default {
   }
 }
 
+/* Slide */
 .mu-dialog-slide-enter-active,
 .mu-dialog-slide-leave-active{
   transform: translate3d(0px, 0px, 0px);
@@ -203,5 +208,27 @@ export default {
 }
 .mu-dialog-slide-leave-active .mu-dialog{
   transform: translate3d(0, 64px, 0);
+}
+
+/* Scale */
+.mu-dialog-scale-enter-active,
+.mu-dialog-scale-leave-active{
+  transform: translate3d(0px, 0px, 0px);
+  transition: opacity .45s @easeOutFunction;
+  .mu-dialog {
+    backface-visibility: hidden;
+    transition: transform .45s @easeOutFunction;
+  }
+}
+.mu-dialog-scale-enter,
+.mu-dialog-scale-leave-active {
+    opacity: 0;
+}
+
+.mu-dialog-scale-enter .mu-dialog{
+  transform: scale(0.6);
+}
+.mu-dialog-scale-leave-active .mu-dialog{
+  transform: scale(0.6);
 }
 </style>
