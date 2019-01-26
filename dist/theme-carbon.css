@@ -155,6 +155,19 @@ a {
 .mu-year-button.hover .mu-year-button-text {
   color: #ff5252;
 }
+.mu-dialog {
+  background-color: #ffffff;
+}
+.mu-dialog-footer.scrollable,
+.mu-dialog-header.scrollable {
+  border-bottom-color: #edeff2;
+}
+.mu-dialog-title {
+  color: #474a4f;
+}
+.mu-dialog-body {
+  color: rgba(71, 74, 79, 0.6);
+}
 .mu-calendar {
   color: #474a4f;
 }
@@ -188,19 +201,6 @@ a {
 }
 .mu-year-button.hover .mu-year-button-text {
   color: #ff5252;
-}
-.mu-dialog {
-  background-color: #ffffff;
-}
-.mu-dialog-footer.scrollable,
-.mu-dialog-header.scrollable {
-  border-bottom-color: #edeff2;
-}
-.mu-dialog-title {
-  color: #474a4f;
-}
-.mu-dialog-body {
-  color: rgba(71, 74, 79, 0.6);
 }
 .mu-dropDown-menu-text {
   color: #474a4f;
@@ -249,6 +249,12 @@ a {
 }
 .mu-grid-tile-action .mu-icon {
   color: #ffffff;
+}
+.mu-icon-button-primary {
+  color: #474a4f;
+}
+.mu-icon-button-secondary {
+  color: #ff5252;
 }
 .mu-circle-spinner {
   border-color: #ff5252;
@@ -578,13 +584,13 @@ a {
   background-color: #ffffff;
   border-color: #ff5252;
 }
-.mu-toast {
-  background-color: rgba(0, 0, 0, 0.87);
-  color: #ffffff;
-}
 .mu-tooltip {
   color: #ffffff;
 }
 .mu-tooltip-ripple.when-shown {
   background-color: #616161;
+}
+.mu-toast {
+  background-color: rgba(0, 0, 0, 0.87);
+  color: #ffffff;
 }

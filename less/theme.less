@@ -203,6 +203,25 @@ a {
   }
 }
 
+.mu-dialog {
+  background-color: @dialogColor;
+}
+
+.mu-dialog-footer,
+.mu-dialog-header {
+  &.scrollable{
+    border-bottom-color: @dialogBorderColor;
+  }
+}
+
+.mu-dialog-title{
+  color: @dialogTitleColor;
+}
+
+.mu-dialog-body {
+  color: @dialogBodyColor
+}
+
 .mu-calendar {
   color: @datePickerCalendarTextColor;
 }
@@ -243,25 +262,6 @@ a {
   .mu-year-button.hover &{
     color: @datePickerSelectColor;
   }
-}
-
-.mu-dialog {
-  background-color: @dialogColor;
-}
-
-.mu-dialog-footer,
-.mu-dialog-header {
-  &.scrollable{
-    border-bottom-color: @dialogBorderColor;
-  }
-}
-
-.mu-dialog-title{
-  color: @dialogTitleColor;
-}
-
-.mu-dialog-body {
-  color: @dialogBodyColor
 }
 
 .mu-dropDown-menu-text {
@@ -779,15 +779,15 @@ a {
   border-color:  @timePickerSelectColor;
 }
 
-.mu-toast {
-  background-color: @toastColor;
-  color: @toastTextColor;
-}
-
 .mu-tooltip{
   color: @tooltipTextColor;
 }
 
 .mu-tooltip-ripple.when-shown {
   background-color: @tooltipRippleColor;
+}
+
+.mu-toast {
+  background-color: @toastColor;
+  color: @toastTextColor;
 }
