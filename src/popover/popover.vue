@@ -1,7 +1,7 @@
 <template>
 <span>
   <transition name="mu-popover" @after-enter="show()" @after-leave="hide()">
-    <div class="mu-popover" :class="[`transition-${anchorOrigin.vertical}-${anchorOrigin.horizontal}`, popoverClass]" ref="popup" v-if="open" :style="{'z-index': zIndex}">
+    <div class="mu-popover" :class="[`transition-${targetOrigin.vertical}-${targetOrigin.horizontal}`, popoverClass]" ref="popup" v-if="open" :style="{'z-index': zIndex}">
       <slot></slot>
     </div>
   </transition>
@@ -214,30 +214,22 @@ export default {
   -webkit-overflow-scrolling: touch;
   .depth(1);
   &.transition-bottom-left {
-    transform-origin: left top;
-  }
-  &.transition-bottom-middle {
-    transform-origin: center top;
-    &.mu-popover-transition-enter,
-    &.mu-popover-transition-leave-active {
-      transform: scaleY(.5);
-    }
-  }
-  &.transition-bottom-right {
-    transform-origin: right top;
-  }
-  &.transition-top-left {
     transform-origin: left bottom;
   }
-  &.transition-top-middle {
+  &.transition-bottom-middle {
     transform-origin: center bottom;
-    &.mu-popover-transition-enter,
-    &.mu-popover-transition-leave-active {
-      transform: scaleY(.5);
-    }
+  }
+  &.transition-bottom-right {
+    transform-origin: right bottom;
+  }
+  &.transition-top-left {
+    transform-origin: left top;
+  }
+  &.transition-top-middle {
+    transform-origin: center top;
   }
   &.transition-top-right {
-    transform-origin: right bottom;
+    transform-origin: right top;
   }
 }
 
