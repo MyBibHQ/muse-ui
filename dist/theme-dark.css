@@ -80,9 +80,6 @@ a {
 .mu-card-text {
   color: #ffffff;
 }
-.mu-circular-progress-determinate-path {
-  stroke: #1976d2;
-}
 .mu-checkbox input[type="checkbox"]:checked + .mu-checkbox-wrapper .mu-checkbox-icon-uncheck {
   color: #1976d2;
 }
@@ -120,6 +117,9 @@ a {
 }
 .mu-chip-delete-icon {
   color: rgba(255, 255, 255, 0.26);
+}
+.mu-circular-progress-determinate-path {
+  stroke: #1976d2;
 }
 .mu-calendar {
   color: #ffffff;
@@ -415,6 +415,10 @@ a {
   color: #757575;
   background-color: #303030;
 }
+.mu-snackbar {
+  color: #303030;
+  background-color: #ffffff;
+}
 .mu-step-button {
   background-color: transparent;
 }
@@ -453,10 +457,6 @@ a {
 .mu-step-label.completed .mu-step-label-circle,
 .mu-step-label.active .mu-step-label-circle {
   background-color: #1976d2;
-}
-.mu-snackbar {
-  color: #303030;
-  background-color: #ffffff;
 }
 .mu-sub-header {
   color: rgba(255, 255, 255, 0.7);

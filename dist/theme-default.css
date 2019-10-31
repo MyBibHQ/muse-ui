@@ -80,9 +80,6 @@ a {
 .mu-card-text {
   color: rgba(0, 0, 0, 0.87);
 }
-.mu-circular-progress-determinate-path {
-  stroke: #7e57c2;
-}
 .mu-checkbox input[type="checkbox"]:checked + .mu-checkbox-wrapper .mu-checkbox-icon-uncheck {
   color: #7e57c2;
 }
@@ -120,6 +117,9 @@ a {
 }
 .mu-chip-delete-icon {
   color: rgba(0, 0, 0, 0.26);
+}
+.mu-circular-progress-determinate-path {
+  stroke: #7e57c2;
 }
 .mu-calendar {
   color: rgba(0, 0, 0, 0.87);
@@ -415,6 +415,10 @@ a {
   color: #bdbdbd;
   background-color: #ffffff;
 }
+.mu-snackbar {
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.87);
+}
 .mu-step-button {
   background-color: transparent;
 }
@@ -453,10 +457,6 @@ a {
 .mu-step-label.completed .mu-step-label-circle,
 .mu-step-label.active .mu-step-label-circle {
   background-color: #7e57c2;
-}
-.mu-snackbar {
-  color: #ffffff;
-  background-color: rgba(0, 0, 0, 0.87);
 }
 .mu-sub-header {
   color: rgba(0, 0, 0, 0.54);

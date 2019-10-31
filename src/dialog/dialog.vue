@@ -1,8 +1,8 @@
 <template>
   <span>
     <transition :name="`mu-dialog-${transition}`" @after-enter="show()" @after-leave="hide()">
-      <div class="mu-dialog-wrapper" @click="handleWrapperClick" v-if="open" ref="popup" :style="{'z-index': zIndex}">
-        <div class="mu-dialog" ref="dialog" :class="dialogClass">
+      <div class="mu-dialog-wrapper" @mousedown="handleWrapperClick" v-if="open" ref="popup" :style="{'z-index': zIndex}">
+        <div class="mu-dialog" ref="dialog" :class="dialogClass" >
           <h3 class="mu-dialog-title" v-if="showTitle" ref="title" :class="headerClass">
             <slot name="title">
               {{title}}

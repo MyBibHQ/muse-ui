@@ -104,10 +104,6 @@ a {
   color: @cardTextColor;
 }
 
-.mu-circular-progress-determinate-path{
-  stroke: @circularProgressColor;
-}
-
 .mu-checkbox {
   input[type="checkbox"] {
     &:checked {
@@ -159,6 +155,10 @@ a {
 
 .mu-chip-delete-icon{
   color: @chipDeleteColor;
+}
+
+.mu-circular-progress-determinate-path{
+  stroke: @circularProgressColor;
 }
 
 .mu-calendar {
@@ -551,6 +551,11 @@ a {
   }
 }
 
+.mu-snackbar {
+  color: @snackbarTextColor;
+  background-color: @snackbarColor;
+}
+
 .mu-step-button {
   background-color: @stepperBackgroundColor;
   &.hover {
@@ -598,11 +603,6 @@ a {
   .mu-step-label.active & {
     background-color: @stepperIconColor;
   }
-}
-
-.mu-snackbar {
-  color: @snackbarTextColor;
-  background-color: @snackbarColor;
 }
 
 // subheader
