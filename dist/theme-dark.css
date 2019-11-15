@@ -415,10 +415,6 @@ a {
   color: #757575;
   background-color: #303030;
 }
-.mu-snackbar {
-  color: #303030;
-  background-color: #ffffff;
-}
 .mu-step-button {
   background-color: transparent;
 }
@@ -457,6 +453,10 @@ a {
 .mu-step-label.completed .mu-step-label-circle,
 .mu-step-label.active .mu-step-label-circle {
   background-color: #1976d2;
+}
+.mu-snackbar {
+  color: #303030;
+  background-color: #ffffff;
 }
 .mu-sub-header {
   color: rgba(255, 255, 255, 0.7);

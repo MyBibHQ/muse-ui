@@ -1,8 +1,8 @@
 <template>
   <label @mousedown="handleMouseDown" @mouseup="handleMouseUp" @mouseleave="handleMouseLeave"
-    @touchstart="handleTouchStart" @touchend="handleTouchEnd" @touchcancel="handleTouchEnd"
+    @touchstart="handleTouchStart" @touchend="handleTouchEnd" @touchcancel="handleTouchEnd" @click.stop="handleClick"
     class="mu-checkbox" :class="{'label-left': labelLeft, 'disabled': disabled, 'no-label': !label}">
-    <input type="checkbox" :disabled="disabled" :name="name" :value="nativeValue" @click.stop="handleClick" @change="handleChange" v-model="inputValue">
+    <input type="checkbox" :disabled="disabled" :name="name" :value="nativeValue" @change="handleChange" v-model="inputValue">
     <touch-ripple v-if="!disabled" rippleWrapperClass="mu-checkbox-ripple-wrapper" class="mu-checkbox-wrapper">
       <div class="mu-checkbox-label" :class="labelClass" v-if="label && labelLeft">{{label}}</div>
       <div class="mu-checkbox-icon">
@@ -88,9 +88,8 @@ export default {
     }
   },
   methods: {
-    handleClick (e) {
+    handleClick () {
       // 阻止事件冒泡，放置外部控制的时候触发两次 click
-      this.$emit('click', e)
     },
     handleMouseDown (event) {
       if (this.disabled) return
@@ -114,7 +113,7 @@ export default {
       if (this.disabled) return
       this.$children[0].end()
     },
-    handleChange (event) {
+    handleChange () {
       this.$emit('change', this.inputValue)
     }
   },
